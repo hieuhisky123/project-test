@@ -5,9 +5,22 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "MazdaType";
+    font-weight: 500;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    background: #f5f5f5;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+    color: #101010;
+    line-height: 1.5;
+}
 html {
     font-family: "MazdaType";
     background-color: #e7e7e7;
+    scroll-behavior: smooth;
 }
 
 #main {
@@ -29,6 +42,14 @@ div {
     vertical-align: baseline;
     background: transparent;
     font-weight: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 #header {
@@ -136,11 +157,18 @@ div {
     flex-wrap: wrap;
 }
 
-.jcol-md-8 {
+/* .jcol-md-8 {
 width: 100%;
 position: relative;
 padding-right: 15px;
 padding-left: 15px;
+} */
+
+.jcol-6, .jcol-md-6, .jcol-md-3, .jcol-md-4, .jcol-md-8, .jcol-md-9, .jcol-md-12 {
+    width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .global__flyout_top_menu ul {
@@ -165,6 +193,66 @@ padding-left: 15px;
     text-decoration: none;
     margin-right: 20px;
     opacity: 0.8;
+}
+
+.global__flyout_top_menu ul li a:hover,
+.global__flyout_top_menu ul li.active a {
+    opacity: 1;
+}
+
+.global__flyout_top_menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    opacity: 0.8;
+}
+
+.header-global__flyout__item .vehicle-selection {
+    padding-top: 0px;
+}
+
+.vehicle-selection {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 20px 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.header-global__flyout__item .vehicle-selection .section_list {
+    padding: 40px 0;
+    border-bottom: 1px solid #D0CECF;
+}
+
+.header-global__flyout__item .vehicle-selection .item_car {
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.header-global__flyout__item .vehicle-selection .item_car h4 {
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+    text-align: center;
+}
+
+.jimg-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-global__flyout__item .vehicle-selection .item_car ul {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 10px; */
+}
+
+.header-global__flyout__item .vehicle-selection .item_car ul li a {
+    color: #9C9C9C;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #slider {
